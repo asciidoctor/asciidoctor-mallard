@@ -1,0 +1,5 @@
+= WORKLOG
+
+== TODO
+
+* Allow emitting multiple pages per document.
