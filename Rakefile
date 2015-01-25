@@ -29,7 +29,6 @@ begin
 rescue LoadError
 end
 
-=begin NOT CURRENTLY IN USE
 begin
   require 'rake/testtask'
   Rake::TestTask.new do |t|
@@ -37,14 +36,27 @@ begin
     t.pattern = 'test/**/*_test.rb'
     t.verbose = true
     t.warning = true
-    if RUBY_VERSION >= '2'
-      t.options = '--tty=no'
-    end
   end
   default_tasks << :test
 rescue LoadError
 end
 
+begin
+  require 'asciidoctor/doctest'
+  require 'asciidoctor-mallard/converter'
+  DocTest::GeneratorTask.new(:generate) do |t|
+    t.output_suite = DocTest::HTML::ExamplesSuite.new(examples_path:
+                                                      'test/examples/mallard',
+                                                      file_ext: '.page')
+    t.converter_opts[:template_dirs] = 'data/templates'
+    t.converter_opts[:backend_name] = 'mallard'
+    t.converter_opts[:converter] = Asciidoctor::Mallard::Converter
+    t.examples_path.unshift 'test/examples/asciidoc'
+  end
+rescue LoadError
+end
+
+=begin NOT CURRENTLY IN USE
 begin
   require 'cucumber'
   require 'cucumber/rake/task'
