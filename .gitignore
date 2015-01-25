@@ -1,6 +1,7 @@
 /_*/
 /Gemfile.lock
 /pkg/
+/.bundle/
 /.ruby-gemset
 /.ruby-version
 *.page
