@@ -29,9 +29,10 @@ An extension for Asciidoctor that converts AsciiDoc documents to Mallard 1.0.
 
   s.has_rdoc = true
   s.rdoc_options = %(--charset=UTF-8 --title="Asciidoctor Mallard" --main=README.adoc -ri)
-  s.extra_rdoc_files = %w(README.adoc LICENSE.adoc NOTICE.adoc)
+  s.extra_rdoc_files = %w(README.adoc LICENSE.adoc)
 
   s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'asciidoctor-doctest', '~> 1.5'
 
   s.add_runtime_dependency 'asciidoctor', '~> 1.5.0'
 end
