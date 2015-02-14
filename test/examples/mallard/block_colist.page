@@ -1,0 +1,20 @@
+<!-- .basic -->
+<listing><code>require 'sinatra' 
+
+get '/hi' do  
+  "Hello World!" 
+end</code></listing>
+
+<!-- .with_title -->
+<listing><code>require 'sinatra' 
+
+get '/hi' do  
+  "Hello World!" 
+end</code></listing>
+
+<!-- .with_id_and_role -->
+<listing><code>require 'sinatra' 
+
+get '/hi' do  
+  "Hello World!" 
+end</code></listing>

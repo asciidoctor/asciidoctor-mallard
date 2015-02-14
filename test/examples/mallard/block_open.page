@@ -1,0 +1,23 @@
+<!-- .basic -->
+<p>An open block can be an anonymous container, or it can masquerade as any other block.</p>
+
+<!-- .basic_with_title -->
+<p>An open block can be an anonymous container, or it can masquerade as any other block.</p>
+
+<!-- .basic_with_id_and_role -->
+<p>An open block can be an anonymous container, or it can masquerade as any other block.</p>
+
+<!-- .abstract -->
+<quote>
+  <p>This is an abstract quote block.</p>
+</quote>
+
+<!-- .abstract_with_title -->
+<quote><title>Abstract title is abstract</title>
+  <p>This is an abstract quote block. Who knows what it really means?</p>
+</quote>
+
+<!-- .abstract_with_id_and_role -->
+<quote xml:id="open">
+  <p>This is an abstract quote block. Who knows what it really means?</p>
+</quote>

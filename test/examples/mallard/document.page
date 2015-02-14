@@ -1,0 +1,36 @@
+<!-- .title -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date></info><title>The Dangerous and Thrilling Documentation Chronicles</title></page>
+
+<!-- .title_with_author -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date><credit type="author"><name>Kismet Rainbow Chameleon</name><email>kismet@asciidoctor.org</email></credit></info><title>The Dangerous and Thrilling Documentation Chronicles</title></page>
+
+<!-- .title_with_author_no_email -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date><credit type="author"><name>Kismet Rainbow Chameleon</name></credit></info><title>The Dangerous and Thrilling Documentation Chronicles</title></page>
+
+<!-- .title_with_multiple_authors -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date><credit type="author"><name>Kismet Rainbow Chameleon</name><email>kismet@asciidoctor.org</email></credit><credit type="author"><name>Lazarus het Draeke</name><email>lazarus@asciidoctor.org</email></credit></info><title>The Dangerous and Thrilling Documentation Chronicles</title></page>
+
+<!-- .title_with_revnumber -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>v1.0</date><credit type="author"><name>Kismet Chameleon</name></credit><revision date="v1.0"></revision></info><title>Document Title</title></page>
+
+<!-- .title_with_revdate -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2013-10-02</date><credit type="author"><name>Kismet Chameleon</name></credit><revision date="2013-10-02" version="1.0"></revision></info><title>Document Title</title></page>
+
+<!-- .title_with_revremark -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>October 2, 2013</date><credit type="author"><name>Kismet Chameleon</name></credit><revision date="October 2, 2013" version="1.0"></revision></info><title>Document Title</title></page>
+
+<!-- .footnotes -->
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date></info><title>Untitled</title>
+  <p>The hail-and-rainbow protocol can be initiated at five levels: double, tertiary, supernumerary, supermassive, and apocalyptic party.[<em>The double hail-and-rainbow level makes my toes tingle.</em>] A bold statement.[<em>Opinions are my own.</em>]</p>
+  <p>Another outrageous statement.[→ <em style="strong">disclaimer</em><em>Opinions are my own.</em>]</p>
+</page>
+
+<!-- .toc -->
+<?asciidoc-toc><page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date></info><title>Document Title</title>
+    <section id="_cavern_glow"><title>Cavern Glow</title></section>
+  </page>
+
+<!-- .toc_title -->
+<?asciidoc-toc><page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xml:lang="en"><info><date>2015-02-14</date></info><title>Document Title</title>
+    <section id="_cavern_glow"><title>Cavern Glow</title></section>
+  </page>

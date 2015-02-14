@@ -5,3 +5,4 @@
 /.ruby-gemset
 /.ruby-version
 *.page
+!/test/examples/mallard/*.page

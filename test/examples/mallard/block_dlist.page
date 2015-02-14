@@ -1,0 +1,131 @@
+<!-- .basic -->
+<terms><item><title>Asciidoctor</title>
+    <p>An implementation of the AsciiDoc processor in Ruby.</p>
+  </item><item><title>Asciidoc</title>
+    <p>A text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs.</p>
+  </item></terms>
+
+<!-- .basic_block -->
+<terms><item><title>About</title>
+    <list><item>
+        <p>An implementation of the AsciiDoc processor in Ruby.</p>
+      </item><item>
+        <p>Fast text processor and publishing toolchain.</p>
+      </item></list></item><item><title>Authors</title>
+    <p>Asciidoctor is lead by Dan Allen and Sarah White and has received contributions from many other individuals in Asciidoctor’s awesome community.</p>
+    <p>AsciiDoc was started by Stuart Rackham.</p>
+  </item></terms>
+
+<!-- .basic_missing_description -->
+<terms><item><title>Definition without a description</title></item></terms>
+
+<!-- .basic_with_title -->
+<terms><title>Asciidoctor</title>
+  <item><title>License</title>
+    <p>MIT</p>
+  </item></terms>
+
+<!-- .basic_with_id_and_role -->
+<terms xml:id="licenses"><item><title>License</title>
+    <p>MIT</p>
+  </item></terms>
+
+<!-- .qanda -->
+<list><item>
+    <p>What is Asciidoctor?</p>
+    <p>An implementation of the AsciiDoc processor in Ruby.</p>
+  </item><item>
+    <p>What is the answer to the Ultimate Question?</p>
+    <p>42</p>
+  </item></list>
+
+<!-- .qanda_block -->
+<list><item>
+    <p>What is Asciidoctor?</p>
+    <list><item>
+        <p>An implementation of the AsciiDoc processor in Ruby.</p>
+      </item><item>
+        <p>Fast text processor and publishing toolchain.</p>
+      </item></list></item><item>
+    <p>Who is behind Asciidoctor?</p>
+    <p>Asciidoctor is lead by Dan Allen and Sarah White and has received contributions from many other individuals in Asciidoctor’s awesome community.</p>
+    <p>AsciiDoc was started by Stuart Rackham.</p>
+  </item></list>
+
+<!-- .qanda_missing_answer -->
+<list><item>
+    <p>Who knows the answer?</p>
+  </item></list>
+
+<!-- .qanda_with_title -->
+<list><title>The most important questions</title>
+  <item>
+    <p>What is the answer to the Ultimate Question?</p>
+    <p>42</p>
+  </item></list>
+
+<!-- .qanda_with_id_and_role -->
+<list xml:id="faq"><item>
+    <p>What is the answer to the Ultimate Question?</p>
+    <p>42</p>
+  </item></list>
+
+<!-- .horizontal -->
+<terms><item><title>Hard drive</title>
+    <p>Permanent storage for operating system and/or user files.</p>
+  </item><item><title>RAM</title>
+    <p>Temporarily stores information the CPU uses during operation.</p>
+  </item></terms>
+
+<!-- .horizontal_with_dimensions -->
+<terms><item><title>Hard drive</title>
+    <p>Permanent storage for operating system and/or user files.</p>
+  </item><item><title>RAM</title>
+    <p>Temporarily stores information the CPU uses during operation.</p>
+  </item></terms>
+
+<!-- .horizontal_with_title -->
+<terms><title>Computer terminology for noobs</title>
+  <item><title>Hard drive</title>
+    <p>Permanent storage for operating system and/or user files.</p>
+  </item><item><title>RAM</title>
+    <p>Temporarily stores information the CPU uses during operation.</p>
+  </item></terms>
+
+<!-- .horizontal_with_id_and_role -->
+<terms xml:id="computer"><item><title>Hard drive</title>
+    <p>Permanent storage for operating system and/or user files.</p>
+  </item><item><title>RAM</title>
+    <p>Temporarily stores information the CPU uses during operation.</p>
+  </item></terms>
+
+<!-- .mixed -->
+<terms><item><title>Operating Systems</title>
+    <terms><item><title>Linux</title>
+        <list type="numbered"><item>
+            <p>Fedora</p>
+            <list><item>
+                <p>Desktop</p>
+              </item></list></item><item>
+            <p>Ubuntu</p>
+            <list><item>
+                <p>Desktop</p>
+              </item><item>
+                <p>Server</p>
+              </item></list></item></list></item><item><title>BSD</title>
+        <list type="numbered"><item>
+            <p>FreeBSD</p>
+          </item><item>
+            <p>NetBSD</p>
+          </item></list></item></terms></item><item><title>Cloud Providers</title>
+    <terms><item><title>PaaS</title>
+        <list type="numbered"><item>
+            <p>OpenShift</p>
+          </item><item>
+            <p>CloudBees</p>
+          </item></list></item><item><title>IaaS</title>
+        <list type="numbered"><item>
+            <p>Amazon EC2</p>
+          </item><item>
+            <p>Rackspace</p>
+          </item></list></item></terms></item></terms>

@@ -1,0 +1,8 @@
+<!-- .menu -->
+<gui style="menu">File</gui>
+
+<!-- .menuitem -->
+<guiseq><gui style="menu">File</gui><gui style="menuitem">Save</gui></guiseq>
+
+<!-- .submenu -->
+<guiseq><gui style="menu">View</gui><gui style="menu">Zoom</gui><gui style="menuitem">Reset</gui></guiseq>

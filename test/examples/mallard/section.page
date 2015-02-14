@@ -1,0 +1,60 @@
+<!-- .level1 -->
+<section id="_section_level_1"><title>Section Level 1</title></section>
+
+<!-- .level2 -->
+<section id="_section_level_2"><title>Section Level 2</title></section>
+
+<!-- .level3 -->
+<section id="_section_level_3"><title>Section Level 3</title></section>
+
+<!-- .level4 -->
+<section id="_section_level_4"><title>Section Level 4</title></section>
+
+<!-- .level5 -->
+<section id="_section_level_5"><title>Section Level 5</title></section>
+
+<!-- .max_nesting -->
+<section id="_section_level_1"><title>Section Level 1</title>
+  <section id="_section_level_2"><title>Section Level 2</title>
+    <section id="_section_level_3"><title>Section Level 3</title>
+      <section id="_section_level_4"><title>Section Level 4</title>
+        <section id="_section_level_5"><title>Section Level 5</title></section>
+      </section>
+    </section>
+  </section>
+  <section id="_section_level_2_2"><title>Section Level 2</title></section>
+</section>
+
+<!-- .with_custom_id -->
+<section id="foo"><title>Section Title</title></section>
+
+<!-- .with_roles -->
+<section id="_section_title"><title>Section Title</title></section>
+
+<!-- .sectanchors -->
+<section id="_title_with_anchor"><title>Title with anchor</title></section>
+
+<!-- .sectlinks -->
+<section id="_linked_title"><title>Linked title</title></section>
+
+<!-- .numbered -->
+<section id="_introduction_to_asciidoctor"><title>Introduction to Asciidoctor</title></section>
+<section id="_quick_starts"><title>Quick Starts</title>
+  <section id="_usage"><title>Usage</title>
+    <section id="_using_the_command_line_interface"><title>Using the Command Line Interface</title>
+      <section id="_processing_your_content"><title>Processing Your Content</title></section>
+    </section>
+  </section>
+  <section id="_syntax"><title>Syntax</title></section>
+</section>
+<section id="_terms_and_concepts"><title>Terms and Concepts</title></section>
+
+<!-- .numbered_sectnumlevels_1 -->
+<section id="_introduction_to_asciidoctor"><title>Introduction to Asciidoctor</title></section>
+<section id="_quick_starts"><title>Quick Starts</title>
+  <section id="_usage"><title>Usage</title>
+    <section id="_using_the_command_line_interface"><title>Using the Command Line Interface</title></section>
+  </section>
+  <section id="_syntax"><title>Syntax</title></section>
+</section>
+<section id="_terms_and_concepts"><title>Terms and Concepts</title></section>

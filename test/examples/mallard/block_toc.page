@@ -1,0 +1,19 @@
+<!-- .basic -->
+<section id="_introduction"><title>Introduction</title></section>
+<section id="_the_ravages_of_writing"><title>The Ravages of Writing</title>
+  <section id="_a_recipe_for_potion"><title>A Recipe for Potion</title></section>
+</section>
+
+<!-- .with_title -->
+<section id="_introduction"><title>Introduction</title></section>
+<section id="_the_ravages_of_writing"><title>The Ravages of Writing</title></section>
+
+<!-- .with_levels -->
+<section id="_introduction"><title>Introduction</title></section>
+<section id="_the_ravages_of_writing"><title>The Ravages of Writing</title>
+  <section id="_a_recipe_for_potion"><title>A Recipe for Potion</title></section>
+</section>
+
+<!-- .with_id_and_role -->
+<section id="_introduction"><title>Introduction</title></section>
+<section id="_the_ravages_of_writing"><title>The Ravages of Writing</title></section>

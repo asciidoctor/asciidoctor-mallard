@@ -1,0 +1,30 @@
+<!-- .basic -->
+<quote>
+  <p>The fog comes on little cat feet.</p>
+</quote>
+
+<!-- .basic_with_attribution -->
+<quote><cite>Carl Sandburg</cite>
+  <p>The fog comes on little cat feet.</p>
+</quote>
+
+<!-- .basic_with_attribution_and_citetitle -->
+<quote><cite>Carl Sandburg</cite>
+  <p>The fog comes on little cat feet.</p>
+  <p><em>two lines from the poem Fog</em></p>
+</quote>
+
+<!-- .basic_with_title -->
+<quote><title>Poetry</title>
+  <p>The fog comes on little cat feet.</p>
+</quote>
+
+<!-- .basic_with_id_and_role -->
+<quote xml:id="sandburg">
+  <p>The fog comes on little cat feet.</p>
+</quote>
+
+<!-- .block -->
+<quote>
+  <p>The fog comes on little cat feet. It sits looking over harbor and city on silent haunches and then moves on.</p>
+</quote>

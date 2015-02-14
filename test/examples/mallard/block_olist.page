@@ -1,0 +1,73 @@
+<!-- .basic -->
+<list type="numbered"><item>
+    <p>Step 1</p>
+  </item><item>
+    <p>Step 2</p>
+  </item><item>
+    <p>Step 3</p>
+  </item></list>
+
+<!-- .with_start -->
+<list startingnumber="6" type="numbered"><item>
+    <p>Step 1</p>
+  </item><item>
+    <p>Step 2</p>
+  </item><item>
+    <p>Step 3</p>
+  </item></list>
+
+<!-- .with_numeration_styles -->
+<list type=""><item>
+    <p>level 1</p>
+    <list type="upper-alpha"><item>
+        <p>level 2</p>
+        <list type="lower-alpha"><item>
+            <p>level 3</p>
+            <list type="lower-roman"><item>
+                <p>level 4</p>
+                <list type=""><item>
+                    <p>level 5</p>
+                  </item></list></item></list></item></list></item></list></item></list>
+
+<!-- .with_title -->
+<list type="numbered"><item>
+    <p>Step 1</p>
+  </item><item>
+    <p>Step 2</p>
+  </item><item>
+    <p>Step 3</p>
+  </item></list>
+
+<!-- .with_id_and_role -->
+<list xml:id="steps" type="numbered"><item>
+    <p>Step 1</p>
+  </item><item>
+    <p>Step 2</p>
+  </item><item>
+    <p>Step 3</p>
+  </item></list>
+
+<!-- .max_nesting -->
+<list type="numbered"><item>
+    <p>level 1</p>
+    <list type="lower-alpha"><item>
+        <p>level 2</p>
+        <list type="lower-roman"><item>
+            <p>level 3</p>
+            <list type="upper-alpha"><item>
+                <p>level 4</p>
+                <list type="upper-roman"><item>
+                    <p>level 5</p>
+                  </item></list></item></list></item></list></item><item>
+        <p>level 2</p>
+      </item></list></item></list>
+
+<!-- .complex_content -->
+<list type="numbered"><item>
+    <p>Every list item has at least one paragraph of content, which may be wrapped, even using a hanging indent.</p>
+    <p>Additional paragraphs or blocks are adjoined by putting a list continuation on a line adjacent to both blocks.</p>
+    <terms><item><title>list continuation</title>
+        <p>a plus sign (<code>+</code>) on a line by itself</p>
+      </item></terms></item><item>
+    <p>A literal paragraph does not require a list continuation.</p>
+    <listing><code>$ gem install asciidoctor</code></listing></item></list>

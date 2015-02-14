@@ -1,0 +1,63 @@
+<!-- .basic -->
+<list><item>
+    <p>Edgar Allen Poe</p>
+  </item><item>
+    <p>Sheri S. Tepper</p>
+  </item><item>
+    <p>Bill Bryson</p>
+  </item></list>
+
+<!-- .with_title -->
+<list><title>Writers</title>
+  <item>
+    <p>Edgar Allen Poe</p>
+  </item><item>
+    <p>Sheri S. Tepper</p>
+  </item><item>
+    <p>Bill Bryson</p>
+  </item></list>
+
+<!-- .with_id_and_role -->
+<list xml:id="authors"><item>
+    <p>Edgar Allen Poe</p>
+  </item><item>
+    <p>Sheri S. Tepper</p>
+  </item><item>
+    <p>Bill Bryson</p>
+  </item></list>
+
+<!-- .max_nesting -->
+<list><item>
+    <p>level 1</p>
+    <list><item>
+        <p>level 2</p>
+        <list><item>
+            <p>level 3</p>
+            <list><item>
+                <p>level 4</p>
+                <list><item>
+                    <p>level 5</p>
+                  </item></list></item></list></item></list></item><item>
+        <p>level 2</p>
+      </item></list></item></list>
+
+<!-- .complex_content -->
+<list><item>
+    <p>Every list item has at least one paragraph of content, which may be wrapped, even using a hanging indent.</p>
+    <p>Additional paragraphs or blocks are adjoined by putting a list continuation on a line adjacent to both blocks.</p>
+    <terms><item><title>list continuation</title>
+        <p>a plus sign (<code>+</code>) on a line by itself</p>
+      </item></terms></item><item>
+    <p>A literal paragraph does not require a list continuation.</p>
+    <listing><code>$ gem install asciidoctor</code></listing></item></list>
+
+<!-- .checklist -->
+<list><item>
+    <p>✓ checked</p>
+  </item><item>
+    <p>✓ also checked</p>
+  </item><item>
+    <p>❏ not checked</p>
+  </item><item>
+    <p>normal list item</p>
+  </item></list>

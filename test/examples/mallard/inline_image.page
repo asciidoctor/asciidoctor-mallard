@@ -1,0 +1,38 @@
+<!-- .image -->
+<media src="linux.svg" type="image">linux</media>
+
+<!-- .image_with_alt_text -->
+<media src="linux.svg" type="image">Tux</media>
+
+<!-- .image_with_dimensions -->
+<media height="35" src="linux.svg" type="image" width="25">Tux</media>
+
+<!-- .image_with_float -->
+<media src="linux.svg" type="image">linux</media>
+
+<!-- .image_with_link -->
+<media src="linux.svg" type="image">linux</media>
+
+<!-- .image_with_role -->
+<media src="linux.svg" type="image">linux</media>
+
+<!-- .icon -->
+<media src="./images/icons/tags.png" type="image">tags</media>
+
+<!-- .icon_with_dimensions -->
+<media height="25" src="./images/icons/tags.png" type="image" width="35">tags</media>
+
+<!-- .icon_with_float -->
+<media src="./images/icons/heart.png" type="image">heart</media>
+
+<!-- .icon_with_link -->
+<media src="./images/icons/download.png" type="image">download</media>
+
+<!-- .icon_with_title -->
+<media src="./images/icons/heart.png" type="image">heart</media>
+
+<!-- .icon_with_role -->
+<media src="./images/icons/tags.png" type="image">tags</media>
+
+<!-- .icon_no_icons -->
+<media src="./images/icons/tags.png" type="image">tags</media>

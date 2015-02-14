@@ -1,0 +1,46 @@
+<!-- .basic -->
+<screen>echo -n "Please enter your name: "
+read name
+echo "Hello, $name!"</screen>
+
+<!-- .basic_with_title -->
+<listing><title>Reading user input</title>
+  <code>echo -n "Please enter your name: "
+read name
+echo "Hello, $name!"</code></listing>
+
+<!-- .basic_nowrap -->
+<screen>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</screen>
+
+<!-- .basic_with_id_and_role -->
+<screen>echo -n "Please enter your name: "
+read name
+echo "Hello, $name!"</screen>
+
+<!-- .source -->
+<listing><code>5.times do
+  print "Odelay!"
+end</code></listing>
+
+<!-- .source_with_title -->
+<listing><title>Odelay!</title>
+  <code>5.times do
+  print "Odelay!"
+end</code></listing>
+
+<!-- .source_with_language -->
+<listing><code>5.times do
+  print "Odelay!"
+end</code></listing>
+
+<!-- .source_nowrap -->
+<listing><code>public class ApplicationConfigurationProvider extends HttpConfigurationProvider {
+
+   public Configuration getConfiguration(ServletContext context) {
+      return ConfigurationBuilder.begin()
+               .addRule()
+               .when(Direction.isInbound().and(Path.matches("/{path}")))
+               .perform(Log.message(Level.INFO, "Client requested path: {path}"))
+               .where("path").matches(".*");
+   }
+}</code></listing>

@@ -1,0 +1,5 @@
+<!-- .plus_sign -->
+Rubies are red,<?asciidoc-br> Topazes are blue.
+
+<!-- .hardbreaks -->
+Ruby is red.<?asciidoc-br> Java is black.

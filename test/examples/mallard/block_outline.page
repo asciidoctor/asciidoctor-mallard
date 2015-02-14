@@ -1,0 +1,32 @@
+<!-- .basic -->
+<section id="_section_1"><title>Section 1</title></section>
+<section id="_section_2"><title>Section 2</title>
+  <section id="_section_2_1"><title>Section 2.1</title>
+    <section id="_section_2_1_1"><title>Section 2.1.1</title></section>
+  </section>
+</section>
+<section id="_section_3"><title>Section 3</title></section>
+
+<!-- .toclevels -->
+<section id="_section_1"><title>Section 1</title>
+  <section id="_section_1_1"><title>Section 1.1</title>
+    <section id="_section_1_1_1"><title>Section 1.1.1</title></section>
+  </section>
+</section>
+<section id="_section_2"><title>Section 2</title></section>
+
+<!-- .numbered -->
+<section id="_section_1"><title>Section 1</title></section>
+<section id="_unnumbered_section"><title>Unnumbered Section</title></section>
+<section id="_section_2"><title>Section 2</title>
+  <section id="_section_2_1"><title>Section 2.1</title></section>
+</section>
+<section id="_section_3"><title>Section 3</title></section>
+
+<!-- .sectnumlevels -->
+<section id="_section_1"><title>Section 1</title>
+  <section id="_section_1_1"><title>Section 1.1</title>
+    <section id="_section_1_1_1"><title>Section 1.1.1</title></section>
+  </section>
+</section>
+<section id="_section_2"><title>Section 2</title></section>

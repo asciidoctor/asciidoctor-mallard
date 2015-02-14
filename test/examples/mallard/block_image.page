@@ -1,0 +1,45 @@
+<!-- .basic -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
+
+<!-- .with_alt_text -->
+<media src="sunset.jpg" type="image">
+  <p>Shining sun</p>
+</media>
+
+<!-- .with_align -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
+
+<!-- .with_float -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
+
+<!-- .with_dimensions -->
+<media height="200" src="sunset.jpg" type="image" width="300">
+  <p>Shining sun</p>
+</media>
+
+<!-- .with_link -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
+
+<!-- .with_title -->
+<figure><title>A mountain sunset</title>
+  <media src="sunset.jpg" type="image">
+    <p>sunset</p>
+  </media></figure>
+
+<!-- .with_id -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
+
+<!-- .with_roles -->
+<media src="sunset.jpg" type="image">
+  <p>sunset</p>
+</media>
