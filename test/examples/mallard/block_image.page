@@ -14,7 +14,7 @@
 </media>
 
 <!-- .with_float -->
-<media src="sunset.jpg" type="image">
+<media src="sunset.jpg" style="floatend floatright" type="image">
   <p>sunset</p>
 </media>
 

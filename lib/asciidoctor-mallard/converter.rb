@@ -145,9 +145,10 @@ module Mallard
 
     def image node
       width_attribute = (node.attr? 'width') ? %( width="#{node.attr 'width'}") : nil
-      depth_attribute = (node.attr? 'height') ? %( height="#{node.attr 'height'}") : nil
+      height_attribute = (node.attr? 'height') ? %( height="#{node.attr 'height'}") : nil
+      style_attribute = (node.attr? 'float') ? %( style="float#{(node.attr? 'float', 'right') ? 'end' : 'start'} float#{node.attr 'float'}") : nil
 
-      mediaobject = %(<media type="image" src="#{node.image_uri(node.attr 'target')}"#{width_attribute}#{depth_attribute}>
+      mediaobject = %(<media type="image" src="#{node.image_uri(node.attr 'target')}"#{width_attribute}#{height_attribute}#{style_attribute}>
 <p>#{node.attr 'alt'}</p>
 </media>)
 
