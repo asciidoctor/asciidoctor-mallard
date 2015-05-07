@@ -1,5 +1,7 @@
 <!-- .plus_sign -->
-Rubies are red,<?asciidoc-br> Topazes are blue.
+Rubies are red,<br xmlns="http://www.w3.org/ns/ttml"/>
+Topazes are blue.
 
 <!-- .hardbreaks -->
-Ruby is red.<?asciidoc-br> Java is black.
+Ruby is red.<br xmlns="http://www.w3.org/ns/ttml"/>
+Java is black.
