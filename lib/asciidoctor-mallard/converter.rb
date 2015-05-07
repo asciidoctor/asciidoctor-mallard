@@ -407,6 +407,8 @@ module Mallard
     }
     QUOTE_TAGS.default = [nil, nil]
 
+    INLINE_ELEMENT_ROLES = ['app', 'cmd', 'file', 'gui']
+
     def inline_quoted node
       if (type = node.type) == :latexmath
         %(<![CDATA[#{node.text}]]>)
@@ -414,7 +416,12 @@ module Mallard
         open, close = QUOTE_TAGS[type]
         text = node.text
         if (role = node.role)
-          quoted_text = %(#{open}<phrase style="#{role}">#{text}</phrase>#{close})
+          # map [gui]_Wi-Fi_ to <gui>Wi-Fi</gui>
+          if type == :emphasis && (INLINE_ELEMENT_ROLES.include? role)
+            quoted_text = %(<#{role}>#{text}</#{role}>)
+          else
+            quoted_text = %(#{open}<span style="#{role}">#{text}</span>#{close})
+          end
         else
           quoted_text = %(#{open}#{text}#{close})
         end
