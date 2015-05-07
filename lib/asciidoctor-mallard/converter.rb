@@ -30,7 +30,8 @@ module Mallard
 
     alias :pass :content
 
-    def skip node
+    def skip node, name = nil
+      warn %(asciidoctor: WARNING: converter missing for #{name || node.node_name} node in mallard backend)
       nil
     end
 
