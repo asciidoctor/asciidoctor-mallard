@@ -11,6 +11,8 @@ module Mallard
 
     register_for 'mallard'
 
+    EOL = "\n"
+
     def initialize backend, opts
       super
       basebackend 'html'
@@ -37,23 +39,24 @@ module Mallard
     def document node
       result = []
       result << '<?xml version="1.0" encoding="UTF-8"?>'
-      if node.attr? 'toc'
-        if node.attr? 'toclevels'
-          result << %(<?asciidoc-toc maxdepth="#{node.attr 'toclevels'}"?>)
-        else
-          result << '<?asciidoc-toc?>'
-        end
-      end
-      # FIXME: add ID to node.
       lang_attribute = (node.attr? 'nolang') ? nil : %( #{lang_attribute_name}="#{node.attr 'lang', 'en'}")
+      # NOTE The Mallard specs explicitly states:
+      # | The id attribute takes a unique identifier, which should match
+      # | the base file name (without extension) of the file containing the page.
+      # Therefore, we don't support a custom id on the document.
       id_attribute = (node.attr? 'docname') ? %( id="#{node.attr 'docname'}") : nil
-      result << %(<page#{document_ns_attributes node}#{lang_attribute}#{id_attribute}>)
+      type_attribute = (node.attr? 'type') ? %( type="#{node.attr 'type'}) : ' type="topic"'
+      style_attribute = (node.attr? 'category') ? %( style="#{node.attr 'category'}") : nil
+      result << %(<page#{document_ns_attributes node}#{lang_attribute}#{type_attribute}#{style_attribute}#{id_attribute}>)
       result << (document_info_element node)
+      if (node.attr? 'toc') && (node.attr? 'toc-placement', 'auto')
+        result << '<links type="section"/>'
+      end
       result << node.content if node.blocks?
       unless (footer_docinfo = node.docinfo :footer).empty?
         result << footer_docinfo
       end
-      result << %(</page>)
+      result << '</page>'
 
       result * EOL
     end
@@ -435,10 +438,10 @@ module Mallard
       name << doc.attr(lastname_key) if doc.attr? lastname_key
 
       result = []
-      result << %(<credit type="author">)
+      result << '<credit type="author">'
       result << %(<name>#{name.join(' ')}</name>)
       result << %(<email>#{doc.attr email_key}</email>) if doc.attr? email_key
-      result << %(</credit>)
+      result << '</credit>'
 
       result * EOL
     end
@@ -457,9 +460,15 @@ module Mallard
 
     def document_info_element doc
       result = []
-      result << %(<info>)
-      result << %(<date>#{(doc.attr? 'revdate') ? (doc.attr 'revdate') : (doc.attr 'docdate')}</date>)
       if doc.has_header?
+        if (doc.attr? 'revdate') || (doc.attr? 'revnumber')
+          rev = []
+          rev << '<revision'
+          rev << %( version="#{doc.attr 'revnumber'}") if doc.attr? 'revnumber'
+          rev << %( date="#{doc.attr 'revdate'}") if doc.attr? 'revdate'
+          rev << '/>'
+          result << rev
+        end
         if doc.attr? 'author'
           if (authorcount = (doc.attr 'authorcount').to_i) < 2
             result << (author_element doc)
@@ -469,20 +478,17 @@ module Mallard
             end
           end
         end
-        if (doc.attr? 'revdate') || (doc.attr? 'revnumber')
-          s = ''
-          s << %(<revision )
-          s << %(version="#{doc.attr 'revnumber'}" ) if doc.attr? 'revnumber'
-          s << %(date="#{doc.attr 'revdate'}" ) if doc.attr? 'revdate'
-          s << %(/>)
-          result << s
-        end
         unless (header_docinfo = doc.docinfo :header).empty?
           result << header_docinfo
         end
-        result << %(<orgname>#{doc.attr 'orgname'}</orgname>) if doc.attr? 'orgname'
+        result << %(<desc>#{doc.attr 'description'}</desc>) if doc.attr? 'description'
+      else
+        result << %(<revision date="#{doc.attr 'revdate'}"/>) if doc.attr? 'revdate'
       end
-      result << %(</info>)
+      unless result.empty?
+        result.unshift '<info>'
+        result << '</info>'
+      end
       result << document_title_tags(doc.doctitle :partition => true, :use_fallback => true) unless doc.notitle
 
       result * EOL
