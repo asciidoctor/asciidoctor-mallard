@@ -187,20 +187,23 @@ module Mallard
       result * EOL
     end
 
-    OLIST_STYLES = {
+    OLIST_TYPES = {
       'arabic'     => 'numbered',
+      'decimal'    => 'decimal-leading-zero',
       'loweralpha' => 'lower-alpha',
-      'upperalpha' => 'upper-alpha',
+      'lowergreek' => 'lower-greek',
       'lowerroman' => 'lower-roman',
-      'upperroman' => 'upper-roman',
+      'upperalpha' => 'upper-alpha',
+      'upperroman' => 'upper-roman'
     }
+    OLIST_TYPES.default = 'numbered'
 
     def olist node
       result = []
-      style = node.style ? OLIST_STYLES[node.style] : 'numbered'
-      type_attribute = %( type="#{style}")
+      type_attribute = %( type="#{OLIST_TYPES[node.style]}")
       start_attribute = (node.attr? 'start') ? %( startingnumber="#{node.attr 'start'}") : nil
-      result << %(<list#{common_attributes node}#{type_attribute}#{start_attribute}>)
+      style_attribute = (node.option? 'compact') ? ' style="compact"' : nil
+      result << %(<list#{common_attributes node}#{type_attribute}#{start_attribute}#{style_attribute}>)
       node.items.each do |item|
         result << '<item>'
         result << %(<p>#{item.text}</p>)
@@ -322,7 +325,8 @@ module Mallard
 
     def ulist node
       result = []
-      result << %(<list#{common_attributes node}>)
+      style_attribute = (node.option? 'compact') ? ' style="compact"' : nil
+      result << %(<list#{common_attributes node}#{style_attribute}>)
       result << %(<title>#{node.title}</title>) if node.title?
       node.items.each do |item|
         text_marker = if (node.option? 'checklist') && (item.attr? 'checkbox')
