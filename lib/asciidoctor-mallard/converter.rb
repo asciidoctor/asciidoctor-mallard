@@ -356,7 +356,19 @@ module Mallard
     alias :verse :quote
 
     alias :video :skip
-    alias :inline_anchor :skip
+
+    def inline_anchor node
+      case node.type
+      when :xref
+        target = node.attr 'fragment'
+        refid = (node.attr 'refid') || target
+        text = node.text || (node.document.references[:ids][refid] || %([#{refid}]))
+        %(<link xref="#{target}">#{text}</link>)
+      when :link
+        %(<link href="#{node.target}">#{node.text}</link>)
+      # FIXME handle ref, bibref and unknown type warning
+      end
+    end
 
     def inline_button node
       %(<gui style="button">#{node.text}</gui>)

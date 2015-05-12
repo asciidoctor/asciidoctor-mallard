@@ -1,19 +1,23 @@
 <!-- .basic -->
+<link href="http://www.asciidoctor.org">http://www.asciidoctor.org</link>
 
 <!-- .basic_with_text -->
+<link href="irc://irc.freenode.org/#asciidoctor">Asciidoctor IRC channel</link>
 
 <!-- .basic_with_target_blank -->
+<link href="view-source:asciidoctor.org">Asciidoctor homepage</link>
 
 <!-- .basic_with_role -->
+<link href="http://discuss.asciidoctor.org/"><em style="strong">mailing list</em></link>
 
 <!-- .xref -->
-The section describes how to add a page break.
+The section <link xref="page-break">[page-break]</link> describes how to add a page break.
 
 <!-- .xref_with_text -->
-The section describes how to add a page break.
+The section <link xref="page-break">Page break</link> describes how to add a page break.
 
 <!-- .xref_resolved_text -->
-Refer to .
+Refer to <link xref="_section_a">Section A</link>.
 
 <!-- .bibref -->
 Andy Hunt &amp; Dave Thomas. The Pragmatic Programmer
