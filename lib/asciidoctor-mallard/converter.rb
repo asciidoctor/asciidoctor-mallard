@@ -241,7 +241,13 @@ module Mallard
       end
     end
 
-    alias :preamble :skip
+    def preamble node
+      if ((doc = node.document).attr? 'toc') && (doc.attr? 'toc-placement', 'preamble')
+        [node.content, '<links type="section"/>'] * EOL
+      else
+        node.content
+      end
+    end
 
     def quote node
       result = []
