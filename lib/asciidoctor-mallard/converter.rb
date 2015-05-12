@@ -326,7 +326,12 @@ module Mallard
       result * EOL
     end
 
-    alias :toc :skip
+    def toc node
+      doc = node.document
+      if (doc.attr? 'toc') && (doc.attr? 'toc-placement', 'macro')
+        '<links type="section"/>'
+      end
+    end
 
     def ulist node
       result = []
