@@ -354,7 +354,7 @@ module Mallard
     alias :inline_callout :skip
 
     def inline_break node
-      %(#{node.text}<?asciidoc-br?>)
+      %(#{node.text}<br xmlns="http://www.w3.org/ns/ttml"/>)
     end
 
     def inline_footnote node

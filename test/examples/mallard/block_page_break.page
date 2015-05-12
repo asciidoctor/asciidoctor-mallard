@@ -1,4 +1,4 @@
 <!-- .basic -->
 <p>Text on the first page</p>
-<p><?asciidoc-pagebreak></p>
+<p><?asciidoc-pagebreak?></p>
   <p>was breaked!</p>
