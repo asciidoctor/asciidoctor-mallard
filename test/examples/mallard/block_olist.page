@@ -17,7 +17,7 @@
   </item></list>
 
 <!-- .with_numeration_styles -->
-<list type=""><item>
+<list type="decimal-leading-zero"><item>
     <p>level 1</p>
     <list type="upper-alpha"><item>
         <p>level 2</p>
@@ -25,7 +25,7 @@
             <p>level 3</p>
             <list type="lower-roman"><item>
                 <p>level 4</p>
-                <list type=""><item>
+                <list type="lower-greek"><item>
                     <p>level 5</p>
                   </item></list></item></list></item></list></item></list></item></list>
 
