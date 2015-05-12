@@ -382,8 +382,7 @@ module Mallard
       if (keys = node.attr 'keys').size == 1
         %(<key>#{keys[0]}</key>)
       else
-        key_combo = keys.map {|key| %(<keycap>#{key}</keycap>) }.join
-        %(<keyseq>#{key_combo}</keyseq>)
+        %(<keyseq>#{keys.map {|key| "<key>#{key}</key>" }.join}</keyseq>)
       end
     end
 
