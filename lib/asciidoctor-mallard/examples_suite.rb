@@ -18,12 +18,12 @@ module Asciidoctor::Mallard
       # When asserting inline examples, ignore paragraph "wrapper".
       includes = opts[:include] || (@paragraph_xpath if example.name.start_with? 'inline_')
 
-      Array.wrap(includes).each do |xpath|
+      [*includes].each do |xpath|
         # XPath returns NodeSet, but we need DocumentFragment, so convert it again.
         xml = parse_xml(xml.xpath(xpath).to_xml)
       end
 
-      Array.wrap(opts[:exclude]).each do |xpath|
+      [*opts[:exclude]].each do |xpath|
         xml.xpath(xpath).remove
       end
 

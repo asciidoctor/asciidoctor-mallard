@@ -33,6 +33,7 @@ An extension for Asciidoctor that converts AsciiDoc documents to Mallard 1.0.
 
   s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'asciidoctor-doctest', '~> 1.5'
+  s.add_development_dependency 'thread_safe', '~> 0.3.5'
 
   s.add_runtime_dependency 'asciidoctor', '~> 1.5.0'
 end

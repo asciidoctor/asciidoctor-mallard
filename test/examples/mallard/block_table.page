@@ -80,7 +80,7 @@
 
 <!-- .with_width -->
 <table frame="all" rules="none">
-  <?dbhtml table-width="80"><?dbfo table-width="80"><?dblatex table-width="80"><colgroup>
+  <?dbhtml table-width="80"?><?dbfo table-width="80"?><?dblatex table-width="80"?><colgroup>
           <col>
           <col>
         </colgroup>
