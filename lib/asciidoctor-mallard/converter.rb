@@ -35,7 +35,7 @@ module Mallard
       }
     }).default = DLIST_TAGS['labeled']
 
-    EOL = "\n"
+    EOL = %(\n)
 
     INLINE_ELEMENT_ROLES = ['app', 'cmd', 'file', 'gui']
 
@@ -314,7 +314,7 @@ module Mallard
             rowspan_attribute = cell.rowspan ? %( rowspan="#{cell.rowspan}") : nil
             entry_start = %(<td#{colspan_attribute}#{rowspan_attribute}>)
             cell_content = if tblsec == :head
-              "<p>#{cell.text}</p>"
+              %(<p>#{cell.text}</p>)
             else
               case cell.style
               when :asciidoc
