@@ -27,7 +27,7 @@ module Asciidoctor::Mallard
         xml.xpath(xpath).remove
       end
 
-      xml.normalize!
+      #xml.normalize!
 
       create_example example.name, content: HtmlBeautifier.beautify(xml), opts: opts
     end
