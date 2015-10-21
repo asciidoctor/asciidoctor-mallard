@@ -43,9 +43,9 @@ end
 
 begin
   require 'asciidoctor/doctest'
-  require 'asciidoctor-mallard/converter'
-  require 'asciidoctor-mallard/normalizer'
-  require 'asciidoctor-mallard/examples_suite'
+  require 'asciidoctor-mallard'
+  require_relative 'test/normalizer'
+  require_relative 'test/examples_suite'
   DocTest::GeneratorTask.new(:generate) do |t|
     t.output_suite = Asciidoctor::Mallard::ExamplesSuite.new examples_path: 'test/examples/mallard', file_ext: '.page'
     t.converter_opts[:backend_name] = 'mallard'
