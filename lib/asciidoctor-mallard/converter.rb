@@ -301,7 +301,7 @@ module Mallard
       end
       result << %(<colgroup>)
       node.columns.each do |col|
-        result << %(<col />)
+        result << %(<col/>)
       end
       result << %(</colgroup>)
       TABLE_SECTIONS.select {|tblsec| !node.rows[tblsec].empty? }.each do |tblsec|

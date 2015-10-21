@@ -9,15 +9,16 @@
 
 <!-- .abstract -->
 <quote>
-  <p>This is an abstract quote block.</p>
+<p>This is an abstract quote block.</p>
 </quote>
 
 <!-- .abstract_with_title -->
-<quote><title>Abstract title is abstract</title>
-  <p>This is an abstract quote block. Who knows what it really means?</p>
+<quote>
+<title>Abstract title is abstract</title>
+<p>This is an abstract quote block. Who knows what it really means?</p>
 </quote>
 
 <!-- .abstract_with_id_and_role -->
 <quote xml:id="open">
-  <p>This is an abstract quote block. Who knows what it really means?</p>
+<p>This is an abstract quote block. Who knows what it really means?</p>
 </quote>

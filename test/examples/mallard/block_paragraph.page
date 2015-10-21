@@ -3,8 +3,9 @@
 <p>To begin a new paragraph, separate it by at least one blank line.</p>
 
 <!-- .with_title -->
-<listing><title>Paragraphs</title>
-  <p>Paragraphs don’t require any special markup in AsciiDoc. A paragraph is just one or more lines of consecutive text.</p>
+<listing>
+<title>Paragraphs</title>
+<p>Paragraphs don’t require any special markup in AsciiDoc. A paragraph is just one or more lines of consecutive text.</p>
 </listing>
 <p>To begin a new paragraph, separate it by at least one blank line.</p>
 

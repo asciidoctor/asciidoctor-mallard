@@ -1,32 +1,35 @@
 <!-- .basic -->
 <quote>
-  <p>Four score and seven years ago our fathers brought forth on this continent a new nation…​</p>
+<p>Four score and seven years ago our fathers brought forth on this continent a new nation…​</p>
 </quote>
 
 <!-- .with_attribution -->
-<quote><cite>Albert Einstein</cite>
-  <p>A person who never made a mistake never tried anything new.</p>
+<quote>
+<cite>Albert Einstein</cite>
+<p>A person who never made a mistake never tried anything new.</p>
 </quote>
 
 <!-- .with_attribution_and_citetitle -->
-<quote><cite>Captain James T. Kirk</cite>
-  <p>Everybody remember where we parked.</p>
-  <p><em>Star Trek IV: The Voyage Home</em></p>
+<quote>
+<cite>Captain James T. Kirk</cite>
+<p>Everybody remember where we parked.</p>
+<p><em>Star Trek IV: The Voyage Home</em></p>
 </quote>
 
 <!-- .with_title -->
-<quote><title>After landing the cloaked Klingon bird of prey in Golden Gate park:</title>
-  <p>Everybody remember where we parked.</p>
+<quote>
+<title>After landing the cloaked Klingon bird of prey in Golden Gate park:</title>
+<p>Everybody remember where we parked.</p>
 </quote>
 
 <!-- .with_id_and_role -->
 <quote xml:id="parking">
-  <p>Everybody remember where we parked.</p>
+<p>Everybody remember where we parked.</p>
 </quote>
 
 <!-- .block -->
 <quote>
-  <p>Dennis: Come and see the violence inherent in the system. Help! Help! I’m being repressed!</p>
-  <p>King Arthur: Bloody peasant!</p>
-  <p>Dennis: Oh, what a giveaway! Did you hear that? Did you hear that, eh? That’s what I’m on about! Did you see him repressing me? You saw him, Didn’t you?</p>
+<p>Dennis: Come and see the violence inherent in the system. Help! Help! I’m being repressed!</p>
+<p>King Arthur: Bloody peasant!</p>
+<p>Dennis: Oh, what a giveaway! Did you hear that? Did you hear that, eh? That’s what I’m on about! Did you see him repressing me? You saw him, Didn’t you?</p>
 </quote>
