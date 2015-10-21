@@ -283,7 +283,7 @@ module Mallard
     end
 
     def sidebar node
-      %(<note style="sidebar" #{common_attributes node}>
+      %(<note style="sidebar"#{common_attributes node}>
 #{title_tag node}#{resolve_content node}
 </note>)
     end
@@ -292,7 +292,7 @@ module Mallard
       has_body = false
       result = []
       rules = (node.attr 'grid') ? 'all' : 'none'
-      result << %(<table #{common_attributes node} frame="#{node.attr 'frame', 'all'}" rules="#{rules}">)
+      result << %(<table#{common_attributes node} frame="#{node.attr 'frame', 'all'}" rules="#{rules}">)
       result << %(<title>#{node.title}</title>) if node.title?
       if (width = (node.attr? 'width') ? (node.attr 'width') : nil)
         TABLE_PI_NAMES.each do |pi_name|
