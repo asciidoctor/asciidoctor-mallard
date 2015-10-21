@@ -459,17 +459,13 @@
   <tbody>
     <tr>
       <td>
-        <p><code>This content is duplicated across two columns.
-          </code></p>
-        <p><code>It is aligned right horizontally.
-          </code></p>
+        <p><code>This content is duplicated across two columns.</code></p>
+        <p><code>It is aligned right horizontally.</code></p>
         <p><code>And it is monospaced.</code></p>
       </td>
       <td>
-        <p><code>This content is duplicated across two columns.
-          </code></p>
-        <p><code>It is aligned right horizontally.
-          </code></p>
+        <p><code>This content is duplicated across two columns.</code></p>
+        <p><code>It is aligned right horizontally.</code></p>
         <p><code>And it is monospaced.</code></p>
       </td>
     </tr>

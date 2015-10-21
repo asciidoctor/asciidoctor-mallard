@@ -1,24 +1,24 @@
 <!-- .basic -->
 <note style="warning">
-  <p>Watch out for dragons!</p>
+<p>Watch out for dragons!</p>
 </note>
 
 <!-- .basic_multiline -->
 <note style="note">
-  <p>An admonition paragraph draws the reader’s attention to auxiliary information. Its purpose is determined by the label at the beginning of the paragraph.</p>
+<p>An admonition paragraph draws the reader’s attention to auxiliary information. Its purpose is determined by the label at the beginning of the paragraph.</p>
 </note>
 
 <!-- .block -->
 <note style="important">
-  <p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
+<p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
 </note>
 
 <!-- .block_with_title -->
 <note style="important"><title>Feeding the Werewolves</title>
-  <p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
+<p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
 </note>
 
 <!-- .block_with_id_and_role -->
 <note xml:id="werewolve" style="important">
-  <p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
+<p>While werewolves are hardy community members, keep in mind some dietary concerns.</p>
 </note>
