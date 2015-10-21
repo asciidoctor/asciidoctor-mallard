@@ -47,9 +47,7 @@ begin
   require 'asciidoctor-mallard/normalizer'
   require 'asciidoctor-mallard/examples_suite'
   DocTest::GeneratorTask.new(:generate) do |t|
-    t.output_suite = Asciidoctor::Mallard::ExamplesSuite.new(examples_path:
-                                                             'test/examples/mallard',
-                                                             file_ext: '.page')
+    t.output_suite = Asciidoctor::Mallard::ExamplesSuite.new examples_path: 'test/examples/mallard', file_ext: '.page'
     t.converter_opts[:backend_name] = 'mallard'
     t.converter_opts[:converter] = Asciidoctor::Mallard::Converter
     t.examples_path.unshift 'test/examples/asciidoc'
