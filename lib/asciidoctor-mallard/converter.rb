@@ -11,7 +11,55 @@ module Mallard
 
     register_for 'mallard'
 
+    (DLIST_TAGS = {
+      'labeled' => {
+        :list  => 'terms',
+        :entry => 'item',
+        :term  => 'title',
+      },
+      'qanda' => {
+        :list  => 'list',
+        :entry => 'item',
+        :label => nil,
+        :term  => 'p',
+      },
+      'glossary' => {
+        :list  => 'terms',
+        :entry => 'item',
+        :term  => 'title',
+      },
+      'horizontal' => {
+        :list  => 'terms',
+        :entry => 'item',
+        :term  => 'title'
+      }
+    }).default = DLIST_TAGS['labeled']
+
     EOL = "\n"
+
+    INLINE_ELEMENT_ROLES = ['app', 'cmd', 'file', 'gui']
+
+    (OLIST_TYPES = {
+      'arabic'     => 'numbered',
+      'decimal'    => 'decimal-leading-zero',
+      'loweralpha' => 'lower-alpha',
+      'lowergreek' => 'lower-greek',
+      'lowerroman' => 'lower-roman',
+      'upperalpha' => 'upper-alpha',
+      'upperroman' => 'upper-roman'
+    }).default = 'numbered'
+
+    (QUOTE_TAGS = {
+      :emphasis    => ['<em>',                '</em>'],
+      :strong      => ['<em style="strong">', '</em>'],
+      :monospaced  => ['<code>',              '</code>'],
+      :double      => ['&#8220;',             '&#8221;'],
+      :single      => ['&#8216;',             '&#8217;'],
+      :mark        => ['<em style="marked">', '</em>']
+    }).default = [nil, nil]
+
+    TABLE_PI_NAMES = ['dbhtml', 'dbfo', 'dblatex']
+    TABLE_SECTIONS = [:head, :foot, :body]
 
     def initialize backend, opts
       super
@@ -79,31 +127,6 @@ module Mallard
 
     alias :audio :skip
     alias :colist :skip
-
-    DLIST_TAGS = {
-      'labeled' => {
-        :list  => 'terms',
-        :entry => 'item',
-        :term  => 'title',
-      },
-      'qanda' => {
-        :list  => 'list',
-        :entry => 'item',
-        :label => nil,
-        :term  => 'p',
-      },
-      'glossary' => {
-        :list  => 'terms',
-        :entry => 'item',
-        :term  => 'title',
-      },
-      'horizontal' => {
-        :list  => 'terms',
-        :entry => 'item',
-        :term  => 'title'
-      }
-    }
-    DLIST_TAGS.default = DLIST_TAGS['labeled']
 
     def dlist node
       result = []
@@ -176,7 +199,7 @@ module Mallard
 
     def literal node
       result = []
-      result << %(<listing>)
+      result << '<listing>'
       result << %(<title>#{node.title}</title>) if node.title?
       result << %(<code>#{node.content}</code>
 </listing>)
@@ -185,23 +208,12 @@ module Mallard
 
     def stem node
       result = []
-      result << %(<listing>)
+      result << '<listing>'
       result << %(<title>#{node.title}</title>) if node.title?
       result << %(<code><![CDATA[#{node.content}]]></code>
 </listing>)
       result * EOL
     end
-
-    OLIST_TYPES = {
-      'arabic'     => 'numbered',
-      'decimal'    => 'decimal-leading-zero',
-      'loweralpha' => 'lower-alpha',
-      'lowergreek' => 'lower-greek',
-      'lowerroman' => 'lower-roman',
-      'upperalpha' => 'upper-alpha',
-      'upperroman' => 'upper-roman'
-    }
-    OLIST_TYPES.default = 'numbered'
 
     def olist node
       result = []
@@ -276,9 +288,6 @@ module Mallard
 </note>)
     end
 
-    TABLE_PI_NAMES = ['dbhtml', 'dbfo', 'dblatex']
-    TABLE_SECTIONS = [:head, :foot, :body]
-
     def table node
       has_body = false
       result = []
@@ -326,7 +335,7 @@ module Mallard
         end
         result << %(</t#{tblsec}>)
       end
-      result << %(</table>)
+      result << '</table>'
 
       warn 'asciidoctor: WARNING: tables must have at least one body row' unless has_body
       result * EOL
@@ -428,18 +437,6 @@ module Mallard
       end
     end
 
-    QUOTE_TAGS = {
-      :emphasis    => ['<em>',                '</em>'],
-      :strong      => ['<em style="strong">', '</em>'],
-      :monospaced  => ['<code>',              '</code>'],
-      :double      => ['&#8220;',             '&#8221;'],
-      :single      => ['&#8216;',             '&#8217;'],
-      :mark        => ['<em style="marked">', '</em>']
-    }
-    QUOTE_TAGS.default = [nil, nil]
-
-    INLINE_ELEMENT_ROLES = ['app', 'cmd', 'file', 'gui']
-
     def inline_quoted node
       if (type = node.type) == :latexmath
         %(<![CDATA[#{node.text}]]>)
@@ -502,7 +499,7 @@ module Mallard
           rev << %( version="#{doc.attr 'revnumber'}") if doc.attr? 'revnumber'
           rev << %( date="#{doc.attr 'revdate'}") if doc.attr? 'revdate'
           rev << '/>'
-          result << rev
+          result << rev.join
         end
         if doc.attr? 'author'
           if (authorcount = (doc.attr 'authorcount').to_i) < 2
@@ -517,8 +514,8 @@ module Mallard
           result << header_docinfo
         end
         result << %(<desc>#{doc.attr 'description'}</desc>) if doc.attr? 'description'
-      else
-        result << %(<revision date="#{doc.attr 'revdate'}"/>) if doc.attr? 'revdate'
+      #else
+      #  result << %(<revision date="#{(doc.attr? 'revdate') ? (doc.attr 'revdate') : (doc.attr 'docdate')}"/>)
       end
       unless result.empty?
         result.unshift '<info>'
