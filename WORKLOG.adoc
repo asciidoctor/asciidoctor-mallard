@@ -2,4 +2,26 @@
 
 == TODO
 
-* Allow emitting multiple pages per document.
+* Implement missing elements
+  - floating_title
+  - colist
+  - inline_callout
+  - ref and bibref anchors
+  - audio / video (use media object, see http://projectmallard.org/1.0/mal_inline_media)
+* How do we make a horizontal rule? A page break?
+* Implement automatic compact list logic (see PDF backend)
+* Allow emitting multiple pages per document
+
+== Things to test
+
+* keyseq proper tags
+* <desc> in header
+* proper revision in header
+* links
+* list numbering type
+* inline element roles (app, gui, etc)
+* type and style on <page>
+* toc
+* compact on outline lists
+* hard break (br)
+* image floating
