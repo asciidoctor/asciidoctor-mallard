@@ -217,17 +217,21 @@ module Mallard
 
     def olist node
       result = []
+      element_name = (node.role? 'steps') ? 'steps' : 'list'
       type_attribute = %( type="#{OLIST_TYPES[node.style]}")
+      if element_name == 'steps' && type_attribute == ' type="numbered"'
+          type_attribute = nil
+      end
       start_attribute = (node.attr? 'start') ? %( startingnumber="#{node.attr 'start'}") : nil
       style_attribute = (node.option? 'compact') ? ' style="compact"' : nil
-      result << %(<list#{common_attributes node}#{type_attribute}#{start_attribute}#{style_attribute}>)
+      result << %(<#{element_name}#{common_attributes node}#{type_attribute}#{start_attribute}#{style_attribute}>)
       node.items.each do |item|
         result << '<item>'
         result << %(<p>#{item.text}</p>)
         result << item.content if item.blocks?
         result << '</item>'
       end
-      result << %(</list>)
+      result << %(</#{element_name}>)
       result * EOL
     end
 
