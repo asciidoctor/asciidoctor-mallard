@@ -94,7 +94,7 @@ module Mallard
       # | the base file name (without extension) of the file containing the page.
       # Therefore, we don't support a custom id on the document.
       id_attribute = (node.attr? 'docname') ? %( id="#{node.attr 'docname'}") : nil
-      type_attribute = (node.attr? 'type') ? %( type="#{node.attr 'type'}) : ' type="topic"'
+      type_attribute = (node.attr? 'type') ? %( type="#{node.attr 'type'}") : ' type="topic"'
       style_attribute = (node.attr? 'category') ? %( style="#{node.attr 'category'}") : nil
       result << %(<page#{document_ns_attributes node}#{lang_attribute}#{type_attribute}#{style_attribute}#{id_attribute}>)
       result << (document_info_element node)
