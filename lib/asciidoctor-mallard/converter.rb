@@ -483,7 +483,9 @@ module Mallard
       # foreign-namespaced attributes), but it also has a limited number of
       # places that the id attribute can be used.  Provide xml:id so that XML
       # processing tools can make use of it.
-      (id = node.id) ? (id_attr ? %( id="#{id}") : %( xml:id="#{id}")) : ''
+      res = (id = node.id) ? (id_attr ? %( id="#{id}") : %( xml:id="#{id}")) : ''
+      res = %(#{res} style="#{node.role}") if node.role
+      res
     end
 
     def doctype_declaration root_tag_name
