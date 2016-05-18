@@ -125,7 +125,25 @@ module Mallard
 </note>)
     end
 
-    alias :audio :skip
+    def audio node
+      width_attribute = (node.attr? 'width') ? %( width="#{node.attr 'width'}") : nil
+      height_attribute = (node.attr? 'height') ? %( height="#{node.attr 'height'}") : nil
+      style_attribute = (node.attr? 'float') ? %( style="float#{(node.attr? 'float', 'right') ? 'end' : 'start'} float#{node.attr 'float'}") : nil
+
+      mediaobject = %(<media type="audio" src="#{node.image_uri(node.attr 'target')}"#{width_attribute}#{height_attribute}#{style_attribute}>
+<p>#{node.attr 'alt'}</p>
+</media>)
+
+      if node.title?
+        %(<figure#{common_attributes node}>
+<title>#{node.title}</title>
+#{mediaobject}
+</figure>)
+      else
+        mediaobject
+      end
+    end
+
     alias :colist :skip
 
     def dlist node
@@ -371,7 +389,24 @@ module Mallard
 
     alias :verse :quote
 
-    alias :video :skip
+    def video node
+      width_attribute = (node.attr? 'width') ? %( width="#{node.attr 'width'}") : nil
+      height_attribute = (node.attr? 'height') ? %( height="#{node.attr 'height'}") : nil
+      style_attribute = (node.attr? 'float') ? %( style="float#{(node.attr? 'float', 'right') ? 'end' : 'start'} float#{node.attr 'float'}") : nil
+
+      mediaobject = %(<media type="video" src="#{node.image_uri(node.attr 'target')}"#{width_attribute}#{height_attribute}#{style_attribute}>
+<p>#{node.attr 'alt'}</p>
+</media>)
+
+      if node.title?
+        %(<figure#{common_attributes node}>
+<title>#{node.title}</title>
+#{mediaobject}
+</figure>)
+      else
+        mediaobject
+      end
+    end
 
     def inline_anchor node
       case node.type
