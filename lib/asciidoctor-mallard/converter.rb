@@ -527,9 +527,9 @@ module Mallard
           end
           if typeg.include? '/'
             type, group = typeg.split('/')
-            result << %(<link type="#{type}" group="#{group}" xref="#{xref}"/>)
+            result << %(<link type="#{type}" group="#{group}" xref="#{xref.strip}"/>)
           else
-            result << %(<link type="#{typeg}" xref="#{xref}"/>)
+            result << %(<link type="#{typeg}" xref="#{xref.strip}"/>)
           end
         end
       end
