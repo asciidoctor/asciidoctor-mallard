@@ -555,18 +555,18 @@ module Mallard
       #  result << %(<revision date="#{(doc.attr? 'revdate') ? (doc.attr 'revdate') : (doc.attr 'docdate')}"/>)
       end
       if doc.attr? 'mallard-links'
-        (doc.attr 'mallard-links').each_line(' ') do |link|
-          if link.include? ':'
-            typeg, xref = link.split(':')
+        (doc.attr 'mallard-links').split(',') do |link|
+          if (link = link.lstrip).include? ':'
+            typeg, xref = link.split ':', 2
           else
             typeg = 'guide'
             xref = link
           end
           if typeg.include? '/'
-            type, group = typeg.split('/')
-            result << %(<link type="#{type}" group="#{group}" xref="#{xref.strip}"/>)
+            type, group = typeg.split '/', 2
+            result << %(<link type="#{type}" group="#{group}" xref="#{xref}"/>)
           else
-            result << %(<link type="#{typeg}" xref="#{xref.strip}"/>)
+            result << %(<link type="#{typeg}" xref="#{xref}"/>)
           end
         end
       end
