@@ -25,13 +25,11 @@ Use accordingly.
 Though the bulk of AsciiDoc content is converted, there's still work needed to fill in gaps where conversion is incomplete, incorrect or not implemented.
 Once it's ready, the project will be moved into the Asciidoctor organization on GitHub.
 
-////
 == Notable Features
 
 * Direct AsciiDoc to Mallard conversion
-////
 
-=== Missing Features
+== Missing Features
 
 See {uri-worklog}[WORKLOG].
 
