@@ -27,7 +27,6 @@ An extension for Asciidoctor that converts AsciiDoc documents to Mallard 1.0.
   s.test_files = s.files.grep(/^(?:test|spec|feature)\/.*$/)
   s.require_paths = %w(lib)
 
-  s.has_rdoc = true
   s.rdoc_options = %(--charset=UTF-8 --title="Asciidoctor Mallard" --main=README.adoc -ri)
   s.extra_rdoc_files = %w(README.adoc LICENSE.adoc)
 
