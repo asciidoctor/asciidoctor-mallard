@@ -1,6 +1,5 @@
 = Asciidoctor Mallard: A Project Mallard converter for AsciiDoc
 // Settings:
-:compat-mode!:
 :experimental:
 :idprefix:
 :idseparator: -
