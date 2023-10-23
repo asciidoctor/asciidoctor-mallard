@@ -236,10 +236,7 @@ module Mallard
     def olist node
       result = []
       element_name = (node.role? 'steps') ? 'steps' : 'list'
-      type_attribute = %( type="#{OLIST_TYPES[node.style]}")
-      if element_name == 'steps' && type_attribute == ' type="numbered"'
-          type_attribute = nil
-      end
+      type_attribute = element_name == 'steps' ? nil : %( type="#{OLIST_TYPES[node.style]}")
       start_attribute = (node.attr? 'start') ? %( startingnumber="#{node.attr 'start'}") : nil
       style_attribute = (node.option? 'compact') ? ' style="compact"' : nil
       result << %(<#{element_name}#{common_attributes node}#{type_attribute}#{start_attribute}#{style_attribute}>)
