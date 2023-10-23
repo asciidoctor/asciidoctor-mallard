@@ -152,7 +152,6 @@ IMPORTANT: You'll need to the `coderay` gem installed to run this example since 
 Open the [file]_example.page_ file with `yelp` to see the result.
 
 You're also encouraged to try converting this link:README.adoc[README] as well as the documents in the examples directory to see more of what {project-name} can do.
-Another good example is the https://github.com/cdi-spec/cdi/tree/master/spec[CDI Specification].
 
 == Contributing
 
